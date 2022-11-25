@@ -3,9 +3,6 @@ package com.pancm;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.github.pagehelper.autoconfigure.PageHelperAutoConfiguration;
-
-
 /**
  * 
 * @Title: App
@@ -15,13 +12,14 @@ import com.github.pagehelper.autoconfigure.PageHelperAutoConfiguration;
 * @author pancm
 * @date 2018年1月9日
  */
-//去掉自动注册了
-@SpringBootApplication(exclude = PageHelperAutoConfiguration.class)
-public class App 
+@SpringBootApplication
+public class ElasticsearchApp
 {
     public static void main( String[] args )
     {
-		SpringApplication.run(App.class, args);
+    	// 启动嵌入式的 Tomcat 并初始化 Spring 环境及其各 Spring 组件
+		SpringApplication.run(ElasticsearchApp.class, args);
 		System.out.println("程序正在运行...");
     }
 }
+ 
